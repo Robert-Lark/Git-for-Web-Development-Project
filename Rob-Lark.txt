@@ -10,7 +10,7 @@ Attributes are extra data we can give to elements to allow them to have higher f
 H1 wraps the most important content on the page - like the page headline. It should only be used once. 
     5. Name two tags that have required attributes
 a (needs an href attribute) 
-Img (needs an src attribute)
+img (needs an src attribute)
     6. What do we put in the head of our HTML document? 
 metadata (document title, character set, styles, links, scripts), specific information about the web page that is not displayed to the user.
     7. What is an id? 
@@ -78,7 +78,7 @@ Version control allows changes to be made without affecting the live code. It al
     35. How often should I commit to github?
 Regularly - every 20-30 min
     36. What is the command we would use to push our repo up to github? 
-git push origin
+push -u origin <branchname>
     37. Walk me through Lambda's git flow. 
 
 There are 11 steps to Lambda’s git flow 
@@ -136,7 +136,14 @@ The top, bottom, left, and right styling codes behave differently with absolute 
 
 3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
 
-
+Set the margin, border and padding widths to 0 - this will make the box wrap around the content without taking any extra space on the page - you can still adjust the width of the element as normal in the code block. 
+ It would look like this:
+Div {
+Margin: 0px;
+Border: 0px;
+Padding: 0px;
+Width: 100px;
+}
 
     4. Name 3 elements that are display block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
 
@@ -146,6 +153,6 @@ display inline-block: button
 
     5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
 
-The box model is css' automatic way of spacing elements on a page. Every element is composed of four areas - content edge, padding edge, border edge & margin edge. 
+The box model is css' automatic way of spacing elements on a page. Every element is composed of four areas - content edge, padding edge, border edge & margin edge.Css allows for the adjustment of each area to space elements as desired on the page. By adding these areas together you get the entire area of the element and thereby can figure out how it will interact with other elements on the page. 
 The fix for the box model comes in the form of the box-sizing: border-box code. This command makes the padding and borders be included in an elements width.
 
